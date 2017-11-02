@@ -17,7 +17,7 @@ class OptionsItem extends Component {
     return (
           <TouchableOpacity
             style={container}
-          onPress={() => this.props.onPress()}>
+          onPress={() => console.log('on press option',this.props.text)}>
           <Text style={text}>{this.props.text}</Text>
           </TouchableOpacity>
     );

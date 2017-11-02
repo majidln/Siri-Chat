@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import {
   View,
   Text,
-  StyleSheet
+  StyleSheet,
+  ScrollView
 } from 'react-native';
 import Header from '../../components/Header';
 import Chat from '../../components/Chat/Chat';
@@ -29,12 +30,19 @@ class ColorView extends Component {
   }
 
   render() {
-    const {container, barHolder} = styles;
+    const {container, scroll, barHolder} = styles;
     return (
       <View style={container}>
-        <Chat/>
-        <Contact/>
-        <Options/>
+        <ScrollView 
+          style={scroll}
+          ref={ref => this.scrollView = ref}
+          onContentSizeChange={(contentWidth, contentHeight)=>{        
+              this.scrollView.scrollToEnd({animated: true});
+          }}>
+          <Chat/>
+          <Contact/>
+          <Options/>
+        </ScrollView>
         <View style={barHolder}>
           <SpeakingBar />
         </View>
@@ -46,7 +54,8 @@ class ColorView extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F6F6F6'
+    backgroundColor: '#F6F6F6',
+    paddingBottom: 70
   },
   barHolder: {
     position: 'absolute',
