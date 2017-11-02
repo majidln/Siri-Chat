@@ -8,7 +8,7 @@ import {
 import Header from '../../components/Header';
 import Chat from '../../components/Chat/Chat';
 import Contact from '../../components/Contact';
-import Buttons from '../../components/Buttons';
+import Options from '../../components/Options/Options';
 import SpeakingBar from '../../components/SpeakingBar';
 
 class ColorView extends Component {
@@ -34,7 +34,7 @@ class ColorView extends Component {
       <View style={container}>
         <Chat/>
         <Contact/>
-        <Buttons/>
+        <Options/>
         <View style={barHolder}>
           <SpeakingBar />
         </View>
