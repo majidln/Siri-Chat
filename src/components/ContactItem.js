@@ -4,7 +4,8 @@ import {
   Text,
   StyleSheet,
   Dimensions,
-  Image
+  Image,
+  Linking
 } from 'react-native';
 import Button from './CallButton';
 
@@ -30,12 +31,22 @@ class ContactItem extends Component {
             </View>
             <View style={opHolder}>
               <Button
-                onPress={() => console.log('hello fucker man')}>
-                <Text style={call}>Call2</Text>
+                onPress={() => this.startCall('tel:' + this.props.number)}>
+                <Text style={call}>Call</Text>
               </Button>
             </View>
           </View>
     );
+  }
+
+  startCall = (number) => {
+    Linking.canOpenURL(number).then(supported => {
+      if (supported) {
+        Linking.openURL(number);
+      } else {
+        console.log('Don\'t know how to open URI: ' + number);
+      }
+    });
   }
 }
 
@@ -75,7 +86,8 @@ const styles = StyleSheet.create({
     width: 50
   },
   call: {
-    textAlign: 'center'
+    textAlign: 'center',
+    color: '#3ab6f1'
   }
 });
 

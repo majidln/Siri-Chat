@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {
   View,
   Text,
-  TouchableHighlight,
+  TouchableOpacity,
   StyleSheet
 } from 'react-native';
 
@@ -15,11 +15,11 @@ class CallButton extends Component {
   render() {
     const {container} = styles;
     return (
-          <TouchableHighlight
+          <TouchableOpacity
             style={container}
           onPress={() => this.props.onPress()}>
           {this.props.children}
-          </TouchableHighlight>
+          </TouchableOpacity>
     );
   }
 }
@@ -27,9 +27,8 @@ class CallButton extends Component {
 const styles = StyleSheet.create({
   container: {
     borderRadius: 30,
-    borderColor: 'green',
+    borderColor: '#3ab6f1',
     borderWidth: 1,
-    color: 'green',
     padding: 5
   },
   main: {
