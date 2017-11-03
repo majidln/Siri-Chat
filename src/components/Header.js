@@ -30,7 +30,7 @@ class Header extends Component {
     locations={[0,1.0]}
     colors={['#3ab6f1', '#49dff4']}
     style={styles.linearGradient}>
-        <DrawerIcon iconDefault={'awareness-ribbon'}/>
+        <DrawerIcon iconDefault={'dribbble'}/>
         <Text style={styles.title}>
             Nava
         </Text>
@@ -51,7 +51,9 @@ const styles = StyleSheet.create({
   },
   title: {
     marginLeft: 10,
-    backgroundColor: 'transparent'
+    fontSize: 18,
+    backgroundColor: 'transparent',
+    color: 'white'
   },
   linearGradient: {
     paddingLeft: 15,
