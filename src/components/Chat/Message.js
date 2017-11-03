@@ -3,7 +3,8 @@ import {
   View,
   Text,
   StyleSheet,
-  Dimensions
+  Dimensions,
+  Image
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
@@ -28,7 +29,7 @@ class Message extends Component {
         </View>
       );
     } else { 
-      const {other, otherHolder} = styles;
+      const {other, otherHolder, triangle} = styles;
       return (
         <View style={otherHolder}>
           <LinearGradient 
@@ -40,6 +41,7 @@ class Message extends Component {
             {this.props.content}
           </Text>
         </LinearGradient>
+        <Image style={triangle} source={require('../../../images/triangle.png')}/>
         </View>
       );
     }
@@ -86,6 +88,13 @@ const styles = StyleSheet.create({
     textAlign: 'right',
     color: '#ffffff',
     backgroundColor: 'transparent'
+  },
+  triangle: {
+    width: 10,
+    height: 10,
+    position: 'absolute',
+    bottom: -10,
+    right: window.width - 50
   }
 });
 
