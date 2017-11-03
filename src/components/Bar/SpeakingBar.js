@@ -121,7 +121,7 @@ class SpeakingBar extends Component {
       </LinearGradient>
       <TouchableOpacity style={centerItem} onPress={() => this.startListining()}>
         <View >
-          <Icon iconDefault={'awareness-ribbon'}/>
+          <Icon iconDefault={'dribbble'}/>
         </View>
       </TouchableOpacity>
       </View>
