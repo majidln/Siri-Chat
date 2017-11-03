@@ -5,6 +5,7 @@ import {
   StyleSheet,
   Dimensions,
   Animated,
+  TouchableOpacity,
   Image
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
@@ -100,9 +101,13 @@ class SpeakingBar extends Component {
     );
   }
 
+  startListining = () => {
+    this.setState({listinigs: !this.state.listinigs});
+  }
+
   renderIdle = () => {
     const {barHolder, centerItem} = styles;
-    return(
+    return (
       <View>
         <LinearGradient
         start={{x: 0.0, y: 0.0}} end={{x: 1.0, y: 0.0}}
@@ -114,9 +119,11 @@ class SpeakingBar extends Component {
           <Icon iconDefault={'keyboard'}/>
         </View>
       </LinearGradient>
-      <View style={centerItem}>
-        <Icon iconDefault={'awareness-ribbon'}/>
-      </View>
+      <TouchableOpacity style={centerItem} onPress={() => this.startListining()}>
+        <View >
+          <Icon iconDefault={'awareness-ribbon'}/>
+        </View>
+      </TouchableOpacity>
       </View>
     );
   }
@@ -167,12 +174,14 @@ class SpeakingBar extends Component {
           </View>
         </View>
       </View>
-      <View style={centerAnimate}>
-          <View style={centerAnimateItem}>
-            <Loading/>
-            <LoadingText text={'Lisitnig'}/>
-          </View>
+      <TouchableOpacity style={centerAnimate} onPress={() => this.startListining()}>
+        <View>
+            <View style={centerAnimateItem}>
+              <Loading/>
+              <LoadingText text={'Lisitnig'}/>
+            </View>
         </View>
+      </TouchableOpacity>
       </View>
     );
   }
