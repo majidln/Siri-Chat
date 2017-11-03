@@ -1,4 +1,4 @@
-import React, {PropTypes,Component} from 'react';
+import React, {Component} from 'react';
 import {
     View,
     StyleSheet
@@ -23,7 +23,6 @@ class Loading extends Component {
 
 const styles = StyleSheet.create({
   main: {
-    color: 'red'
   }
 });
 

@@ -28,13 +28,11 @@ class LoadingText extends Component {
 
   dots = () => {
     this.setState({counter: this.state.counter + 1});
-    console.log(this.state.counter , this.state.counter > 3);
     if (this.state.counter > 3) {
       this.setState({counter: -1});
     }else{
       let concat = '';
       for (let i = 0 ; i < this.state.counter; i++) {
-        console.log('i' , i);
         concat += '.';
       }
   
