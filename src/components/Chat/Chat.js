@@ -39,14 +39,6 @@ class Chat extends Component {
         {
           source: 'other',
           content: 'Dear EEEEElizabeth'
-        },
-        {
-          source: 'me',
-          content: 'Who???? again'
-        },
-        {
-          source: 'other',
-          content: 'Dear EEEEElizabeth'
         }
       ]
     };

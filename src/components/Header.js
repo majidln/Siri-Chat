@@ -7,7 +7,7 @@ import {
   Platform,
   Image
 } from 'react-native';
-import DrawerIcon from './DrawerIcon';
+import DrawerIcon from './Icon';
 import LinearGradient from 'react-native-linear-gradient';
 
 const window = Dimensions.get('window');

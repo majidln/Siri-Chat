@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {
   View,
-  Text,
   StyleSheet,
   ScrollView
 } from 'react-native';
@@ -10,7 +9,7 @@ import Header from '../../components/Header';
 import Chat from '../../components/Chat/Chat';
 import Contact from '../../components/Contact';
 import Options from '../../components/Options/Options';
-import SpeakingBar from '../../components/SpeakingBar';
+import SpeakingBar from '../../components/Bar/SpeakingBar';
 
 class ColorView extends Component {
   static displayName = 'ColorView';
@@ -55,12 +54,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#F6F6F6',
-    paddingBottom: 70
+    paddingBottom: 80
   },
   barHolder: {
     position: 'absolute',
-    height: 70,
-    backgroundColor: 'blue',
+    height: 90,
     bottom: 0,
     left: 0,
     right: 0

@@ -1,14 +1,14 @@
 import React, {Component} from 'react';
 import {
   View,
-  Text,
   StyleSheet,
   Dimensions
 } from 'react-native';
+import Entypo from 'react-native-vector-icons/Entypo';
 
 const window = Dimensions.get('window');
 
-class SpeakingBar extends Component {
+class Icon extends Component {
 
   constructor(props) {
     super(props);
@@ -17,7 +17,11 @@ class SpeakingBar extends Component {
   render() {
     return (
           <View style={styles.container}>
-            <Text>SpeakingBar</Text>
+            <Entypo
+                style={styles.main}
+                name={this.props.iconDefault}
+                size={25}
+            />
           </View>
     );
   }
@@ -30,7 +34,7 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   main: {
-    color: 'blue',
+    color: 'white',
     backgroundColor: 'transparent'
   },
   imageHolder: {
@@ -50,4 +54,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default SpeakingBar;
+export default Icon;
