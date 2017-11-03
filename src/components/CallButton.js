@@ -26,10 +26,10 @@ class CallButton extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    borderRadius: 30,
+    borderRadius: 20,
     borderColor: '#3ab6f1',
     borderWidth: 1,
-    padding: 5
+    padding: 3
   },
   main: {
     color: 'blue',

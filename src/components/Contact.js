@@ -37,9 +37,10 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     margin: 20,
     padding: 15,
-    shadowOffset: {width: 5, height: 5},
+    shadowOffset: {width: 1, height: 1},
     shadowColor: '#3ab6f1',
-    shadowOpacity: .3,
+    shadowOpacity: .5,
+    borderRadius: 10
   },
   titleHolder: {
   },

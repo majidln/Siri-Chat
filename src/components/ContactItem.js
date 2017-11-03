@@ -8,6 +8,7 @@ import {
   Linking
 } from 'react-native';
 import Button from './CallButton';
+import Icon from './Icon';
 
 const window = Dimensions.get('window');
 
@@ -32,7 +33,7 @@ class ContactItem extends Component {
             <View style={opHolder}>
               <Button
                 onPress={() => this.startCall('tel:' + this.props.number)}>
-                <Text style={call}>Call</Text>
+                <Icon iconDefault={'phone'} style={{color: '#3ab6f1'}}/>
               </Button>
             </View>
           </View>
@@ -58,7 +59,7 @@ const styles = StyleSheet.create({
     paddingBottom: 10
   },
   imageHolder: {
-    width: 50,
+    width: 60,
     height: 50,
     justifyContent: 'center',
     alignItems: 'center',
@@ -80,7 +81,8 @@ const styles = StyleSheet.create({
   },
   number: {
     fontSize: 12,
-    fontWeight: 'normal'
+    fontWeight: 'normal',
+    color: 'gray'
   },
   opHolder: {
     width: 50

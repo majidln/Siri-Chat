@@ -18,7 +18,7 @@ class Icon extends Component {
     return (
           <View style={styles.container}>
             <Entypo
-                style={styles.main}
+                style={[styles.main, this.props.style]}
                 name={this.props.iconDefault}
                 size={25}
             />
